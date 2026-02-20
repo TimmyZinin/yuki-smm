@@ -14,13 +14,13 @@ export default function Founder() {
             <div className="text-sm text-accent-light font-medium mb-2">Основатель</div>
             <h3 className="text-xl md:text-2xl font-bold mb-4">Тим Зинин</h3>
             <p className="text-text-secondary leading-relaxed mb-4">
-              Мы сделали Юки для себя — вести 5 аккаунтов одному невозможно.
-              Агент генерирует контент для двух авторов, публикует в LinkedIn, Telegram,
-              Threads и VK. 2 740 тестов, 24 спринта разработки, работает в production.
+              Мы создали AI-агента для своей команды — вести 5 аккаунтов в соцсетях
+              одному невозможно. 24 спринта разработки, 2 740 тестов, работает в production
+              каждый день.
             </p>
             <p className="text-text-secondary leading-relaxed">
-              Теперь делимся с вами. Юки — не очередной генератор текста.
-              Это агент с памятью, стилем и автоматизацией.
+              Потом поняли: у владельцев салонов красоты та же боль, только острее —
+              весь день с клиентами, а аккаунт молчит. Сделали Yuki для вас.
             </p>
           </div>
         </div>

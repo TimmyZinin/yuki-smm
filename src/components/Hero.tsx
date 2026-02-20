@@ -9,19 +9,19 @@ export default function Hero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 glass-card !rounded-full px-4 py-2 mb-8">
           <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-sm text-text-secondary">Ранний доступ открыт</span>
+          <span className="text-sm text-text-secondary">Для салонов красоты, барбершопов и клиник</span>
         </div>
 
         {/* Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
-          AI-агент ведёт ваш SMM.{' '}
-          <span className="gradient-text">Вы занимаетесь бизнесом.</span>
+          Клиенты находят вас в соцсетях.{' '}
+          <span className="gradient-text">Агент ведёт ваши аккаунты.</span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
-          Подключаете аккаунты — агент генерирует контент, публикует по расписанию,
-          учится на вашем стиле. Telegram, VK, LinkedIn, Threads.
+          AI-агент пишет посты про ваши услуги, советы по уходу, акции и до/после.
+          Публикует в Instagram, VK и Telegram — пока вы работаете с клиентами.
         </p>
 
         {/* CTAs */}
@@ -30,7 +30,7 @@ export default function Hero() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
-            Занять место в листе ожидания
+            Попробовать бесплатно
           </a>
           <a href="#how-it-works" className="btn-secondary text-lg">
             Как это работает
@@ -38,10 +38,10 @@ export default function Hero() {
         </div>
 
         <p className="text-sm text-text-muted">
-          Бесплатно для первых 50 участников. Без кредитной карты.
+          Бесплатно для первых 50 салонов. Без кредитной карты.
         </p>
 
-        {/* Mock dashboard */}
+        {/* Mock dashboard — beauty specific */}
         <div className="mt-16 glass-card p-4 md:p-6 max-w-3xl mx-auto animate-float">
           <div className="bg-navy-light rounded-xl p-6 space-y-4">
             {/* Mock header */}
@@ -50,7 +50,7 @@ export default function Hero() {
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-cyan" />
                 <div>
                   <div className="text-sm font-semibold">Yuki Agent</div>
-                  <div className="text-xs text-text-muted">Готовит публикации...</div>
+                  <div className="text-xs text-text-muted">Готовит посты для вашего салона...</div>
                 </div>
               </div>
               <div className="flex gap-2">
@@ -59,12 +59,12 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Mock posts */}
+            {/* Mock posts — beauty content */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {[
-                { platform: 'LinkedIn', color: 'from-blue-500 to-blue-700', text: '5 инсайтов о найме в 2026...' },
-                { platform: 'Telegram', color: 'from-sky-400 to-sky-600', text: 'Почему soft skills важнее...' },
-                { platform: 'VK', color: 'from-blue-400 to-indigo-600', text: 'Как я нанял 3х разработчиков...' },
+                { platform: 'Instagram', color: 'from-pink-500 to-purple-600', text: 'Балаяж на тёмные волосы: 5 вариантов для весны 2026...' },
+                { platform: 'VK', color: 'from-blue-400 to-indigo-600', text: 'Акция до 28 февраля: маникюр + педикюр со скидкой 20%...' },
+                { platform: 'Telegram', color: 'from-sky-400 to-sky-600', text: 'Как ухаживать за бровями после ламинирования: 3 совета...' },
               ].map((post) => (
                 <div key={post.platform} className="bg-navy/50 rounded-lg p-3 border border-glass-border">
                   <div className="flex items-center gap-2 mb-2">

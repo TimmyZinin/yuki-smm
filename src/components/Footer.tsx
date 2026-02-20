@@ -8,7 +8,7 @@ export default function Footer() {
           </div>
           <div>
             <span className="font-bold text-text-primary">Yuki</span>
-            <span className="text-text-muted text-sm ml-2">AI SMM Agent</span>
+            <span className="text-text-muted text-sm ml-2">AI для салонов красоты</span>
           </div>
         </div>
 

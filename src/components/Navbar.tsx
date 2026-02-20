@@ -11,14 +11,14 @@ export default function Navbar() {
             <span className="text-white font-extrabold text-sm">Y</span>
           </div>
           <span className="font-bold text-lg text-text-primary">Yuki</span>
-          <span className="text-xs text-text-muted hidden sm:inline">AI SMM Agent</span>
+          <span className="text-xs text-text-muted hidden sm:inline">для салонов красоты</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
           <a href="#how-it-works" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Как работает</a>
           <a href="#features" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Возможности</a>
           <a href="#pricing" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Цены</a>
-          <a href="#waitlist" className="btn-primary !py-2.5 !px-5 !text-sm">Получить доступ</a>
+          <a href="#waitlist" className="btn-primary !py-2.5 !px-5 !text-sm">Попробовать бесплатно</a>
         </div>
 
         <button
@@ -41,7 +41,7 @@ export default function Navbar() {
           <a href="#how-it-works" className="text-text-secondary" onClick={() => setMenuOpen(false)}>Как работает</a>
           <a href="#features" className="text-text-secondary" onClick={() => setMenuOpen(false)}>Возможности</a>
           <a href="#pricing" className="text-text-secondary" onClick={() => setMenuOpen(false)}>Цены</a>
-          <a href="#waitlist" className="btn-primary text-center !text-sm" onClick={() => setMenuOpen(false)}>Получить доступ</a>
+          <a href="#waitlist" className="btn-primary text-center !text-sm" onClick={() => setMenuOpen(false)}>Попробовать бесплатно</a>
         </div>
       )}
     </nav>
