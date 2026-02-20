@@ -5,12 +5,11 @@ const plans = [
     oldPrice: '3 900',
     newPrice: '1 900',
     features: [
-      'AI-контент для 1 салона',
       'Instagram + VK',
       '30 публикаций в месяц',
-      'Автопубликация по расписанию',
       'Подписи к фото до/после',
       'Советы по уходу, акции',
+      'Автопубликация по расписанию',
     ],
     cta: 'Попробовать бесплатно',
     popular: false,
@@ -22,12 +21,11 @@ const plans = [
     oldPrice: '5 900',
     newPrice: '2 900',
     features: [
-      'Всё из тарифа Мастер +',
       'Instagram + VK + Telegram',
       'Безлимитные публикации',
       'Профили мастеров (до 10)',
       'Контент-план на неделю',
-      'Обучение на ваших оценках',
+      'Обучается на ваших оценках',
       'Приоритетная поддержка',
     ],
     cta: 'Попробовать бесплатно',
@@ -40,12 +38,11 @@ const plans = [
     oldPrice: '14 900',
     newPrice: null,
     features: [
-      'Всё из тарифа Салон +',
-      'Несколько точек / брендов',
+      'Несколько точек и брендов',
       'Единый стиль сети',
       'Персональный менеджер',
       'Интеграция с YCLIENTS',
-      'White-label возможности',
+      'White-label',
     ],
     cta: 'Обсудить',
     popular: false,
@@ -55,12 +52,17 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="section-padding bg-navy-light/50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Дешевле фрилансера. Лучше ChatGPT.</h2>
-          <p className="text-text-secondary text-lg">
-            Для первых 50 салонов — цена <span className="text-accent-light font-semibold">фиксируется навсегда</span>
+    <section id="pricing" className="section-padding bg-cream-warm">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <div className="divider mb-6" />
+          <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-5">
+            Дешевле фрилансера.
+            <br />
+            <span className="text-text-secondary">Умнее ChatGPT.</span>
+          </h2>
+          <p className="text-text-secondary">
+            Для первых 50 салонов — <span className="accent-text font-medium">цена фиксируется навсегда</span>
           </p>
         </div>
 
@@ -68,45 +70,43 @@ export default function Pricing() {
           {plans.map((p) => (
             <div
               key={p.name}
-              className={`glass-card p-6 md:p-8 flex flex-col relative ${
-                p.popular ? 'border-accent/50 md:scale-105' : ''
+              className={`elegant-card p-7 md:p-8 flex flex-col relative ${
+                p.popular ? '!border-rose/30 md:scale-[1.03]' : ''
               }`}
             >
               {p.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-accent to-cyan text-white text-xs font-bold px-4 py-1 rounded-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-mocha-dark text-cream text-xs font-medium px-4 py-1.5 rounded-full">
                   Для большинства салонов
                 </div>
               )}
 
-              <h3 className="text-xl font-bold mb-1">{p.name}</h3>
+              <h3 className="font-serif text-2xl font-semibold mb-1">{p.name}</h3>
               <p className="text-sm text-text-muted mb-6">{p.desc}</p>
 
-              <div className="mb-2">
+              <div className="mb-1">
                 {p.newPrice ? (
                   <>
-                    <span className="text-text-muted line-through text-lg mr-2">{p.oldPrice} &#8381;</span>
-                    <span className="text-3xl font-extrabold gradient-text">{p.newPrice} &#8381;</span>
+                    <span className="text-text-muted line-through text-base mr-2">{p.oldPrice} &#8381;</span>
+                    <span className="font-serif text-3xl font-semibold text-mocha-dark">{p.newPrice} &#8381;</span>
                     <span className="text-text-muted text-sm">/мес</span>
                   </>
                 ) : (
                   <>
-                    <span className="text-text-muted line-through text-lg mr-2">{p.oldPrice} &#8381;</span>
-                    <span className="text-2xl font-bold text-text-primary">По запросу</span>
+                    <span className="text-text-muted line-through text-base mr-2">{p.oldPrice} &#8381;</span>
+                    <span className="font-serif text-2xl font-semibold">По запросу</span>
                   </>
                 )}
               </div>
 
               {p.anchor && (
-                <p className="text-xs text-emerald-400 mb-6">{p.anchor}</p>
+                <p className="text-xs accent-text mb-6">{p.anchor}</p>
               )}
               {!p.anchor && <div className="mb-6" />}
 
               <ul className="space-y-3 mb-8 flex-1">
                 {p.features.map((f) => (
                   <li key={f} className="flex items-start gap-2.5 text-sm text-text-secondary">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-accent-light shrink-0 mt-0.5">
-                      <path d="M5 13l4 4L19 7" />
-                    </svg>
+                    <span className="accent-text mt-0.5 shrink-0">&#10003;</span>
                     {f}
                   </li>
                 ))}
@@ -114,7 +114,7 @@ export default function Pricing() {
 
               <a
                 href="#waitlist"
-                className={p.popular ? 'btn-primary text-center' : 'btn-secondary text-center'}
+                className={p.popular ? 'btn-primary text-center w-full' : 'btn-secondary text-center w-full'}
               >
                 {p.cta}
               </a>
@@ -123,7 +123,7 @@ export default function Pricing() {
         </div>
 
         <p className="text-center text-text-muted text-sm mt-8">
-          Все цены в рублях. Можно отменить в любой момент. Первые 7 дней — бесплатно.
+          Первые 7 дней бесплатно. Отмена в один клик. Без скрытых платежей.
         </p>
       </div>
     </section>
