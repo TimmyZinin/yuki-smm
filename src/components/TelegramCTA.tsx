@@ -4,15 +4,25 @@ export default function TelegramCTA() {
   const ref = useReveal()
 
   return (
-    <section id="waitlist" className="section-grand bg-espresso text-cream">
-      <div ref={ref} className="max-w-2xl mx-auto text-center reveal-up">
+    <section id="waitlist" className="section-grand relative overflow-hidden">
+      {/* Background image with dark overlay */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/freedom-lifestyle.webp"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-espresso/85" />
+      </div>
+
+      <div ref={ref} className="max-w-2xl mx-auto text-center relative z-10 text-cream reveal-up">
         <div className="w-12 h-[1px] bg-rose-light mx-auto mb-8" />
 
         <p className="font-serif italic text-lg text-rose-light mb-8">
           &laquo;Соцсети работают — я отдыхаю&raquo;
         </p>
 
-        <h2 className="font-serif text-3xl md:text-[3.5rem] font-bold mb-6 leading-tight">
+        <h2 className="font-serif text-3xl md:text-[3.5rem] font-bold mb-6 leading-tight text-cream">
           Попробуйте бесплатно.
           <br />
           7 дней. Без обязательств.

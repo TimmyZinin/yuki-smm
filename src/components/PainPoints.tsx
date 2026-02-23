@@ -27,8 +27,18 @@ export default function PainPoints() {
   const ref = useReveal()
 
   return (
-    <section className="section-standard">
-      <div ref={ref} className="max-w-5xl mx-auto reveal-up">
+    <section className="section-standard relative overflow-hidden">
+      {/* Decorative salon image */}
+      <div className="absolute top-0 right-0 w-1/3 h-full hidden lg:block">
+        <img
+          src="/images/tired-owner.webp"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-cream/70 to-cream" />
+      </div>
+
+      <div ref={ref} className="max-w-5xl mx-auto relative z-10 reveal-up">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-5">Вы не одна такая</h2>
           <p className="text-text-secondary max-w-lg mx-auto leading-relaxed">
@@ -36,9 +46,9 @@ export default function PainPoints() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:max-w-3xl">
           {pains.map((p) => (
-            <div key={p.title} className="border-l-2 border-rose-gold/40 pl-7 py-6">
+            <div key={p.title} className="border-l-2 border-rose-gold/40 pl-7 py-6 bg-cream/80 backdrop-blur-sm">
               <div className="text-2xl mb-4">{p.emoji}</div>
               <h3 className="font-serif text-xl font-semibold mb-3 leading-snug">{p.title}</h3>
               <p className="text-text-secondary text-sm leading-relaxed">{p.desc}</p>

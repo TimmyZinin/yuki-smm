@@ -23,8 +23,17 @@ export default function SocialProof() {
   const ref = useReveal()
 
   return (
-    <section className="section-standard">
-      <div ref={ref} className="max-w-5xl mx-auto reveal-up">
+    <section className="section-standard relative overflow-hidden">
+      {/* Decorative background image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/salon-interior.webp"
+          alt=""
+          className="w-full h-full object-cover opacity-[0.08]"
+        />
+      </div>
+
+      <div ref={ref} className="max-w-5xl mx-auto relative z-10 reveal-up">
         <div className="grid grid-cols-3 gap-6 mb-16">
           {metrics.map((m) => (
             <div key={m.label} className="text-center">

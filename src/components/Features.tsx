@@ -7,6 +7,7 @@ const features = [
     size: 'col-span-1 md:col-span-2',
     tags: ['Tone of voice', 'Ваши услуги', 'Имена мастеров'],
     accent: true,
+    image: '/images/happy-phone.webp',
   },
   {
     title: 'Публикует везде — одной кнопкой',
@@ -34,6 +35,7 @@ const features = [
     desc: 'Понедельник — совет по уходу. Среда — акция. Пятница — знакомство с мастером. Yuki предлагает темы, вы одобряете или корректируете.',
     size: 'col-span-1 md:col-span-2',
     accent: true,
+    image: '/images/beauty-flat-lay.webp',
   },
 ]
 
@@ -54,28 +56,39 @@ export default function Features() {
           {features.map((f) => (
             <div
               key={f.title}
-              className={`elegant-card p-7 md:p-8 ${f.size} ${f.accent ? 'border-t-2 border-t-rose-gold/40 bg-cream-warm/30' : ''}`}
+              className={`elegant-card overflow-hidden ${f.size} ${f.accent ? 'border-t-2 border-t-rose-gold/40' : ''}`}
             >
-              {f.tags && (
-                <div className="flex gap-2 mb-4 flex-wrap">
-                  {f.tags.map((tag) => (
-                    <span key={tag} className="text-xs px-3 py-1.5 rounded-full bg-cream-warm border border-card-border text-text-secondary font-medium">
-                      {tag}
-                    </span>
-                  ))}
+              {f.image && (
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={f.image}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               )}
-              {f.memoryItems && (
-                <div className="flex gap-2 mb-4 flex-wrap">
-                  {f.memoryItems.map((m) => (
-                    <div key={m} className="text-xs bg-cream-warm text-rose-gold px-3 py-1.5 rounded-full border border-card-border font-medium">
-                      {m}
-                    </div>
-                  ))}
-                </div>
-              )}
-              <h3 className="font-serif text-xl font-semibold mb-3 leading-snug">{f.title}</h3>
-              <p className="text-sm text-text-secondary leading-relaxed">{f.desc}</p>
+              <div className="p-7 md:p-8">
+                {f.tags && (
+                  <div className="flex gap-2 mb-4 flex-wrap">
+                    {f.tags.map((tag) => (
+                      <span key={tag} className="text-xs px-3 py-1.5 rounded-full bg-cream-warm border border-card-border text-text-secondary font-medium">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {f.memoryItems && (
+                  <div className="flex gap-2 mb-4 flex-wrap">
+                    {f.memoryItems.map((m) => (
+                      <div key={m} className="text-xs bg-cream-warm text-rose-gold px-3 py-1.5 rounded-full border border-card-border font-medium">
+                        {m}
+                      </div>
+                    ))}
+                  </div>
+                )}
+                <h3 className="font-serif text-xl font-semibold mb-3 leading-snug">{f.title}</h3>
+                <p className="text-sm text-text-secondary leading-relaxed">{f.desc}</p>
+              </div>
             </div>
           ))}
         </div>
