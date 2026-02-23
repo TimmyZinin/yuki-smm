@@ -1,3 +1,5 @@
+import { useReveal } from '../hooks/useReveal'
+
 const rows = [
   {
     old: 'Открываете ChatGPT, думаете над промптом',
@@ -22,12 +24,13 @@ const rows = [
 ]
 
 export default function Comparison() {
+  const ref = useReveal()
+
   return (
-    <section className="section-padding bg-cream-warm">
-      <div className="max-w-3xl mx-auto">
+    <section className="section-tight bg-cream-warm">
+      <div ref={ref} className="max-w-3xl mx-auto reveal-up">
         <div className="text-center mb-16">
-          <div className="divider mb-6" />
-          <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-5">
+          <h2 className="text-2xl md:text-4xl font-serif font-medium mb-5">
             Было — стало
           </h2>
           <p className="text-text-secondary">Перестаньте бегать между пятью приложениями</p>
@@ -61,9 +64,16 @@ export default function Comparison() {
         {/* Time saved */}
         <div className="mt-10 text-center">
           <div className="inline-flex items-center gap-3 elegant-card !rounded-full px-6 py-3">
-            <span className="font-serif text-2xl font-semibold text-mocha-dark">~15 часов</span>
+            <span className="font-serif text-2xl font-semibold text-espresso">~15 часов</span>
             <span className="text-text-secondary text-sm">экономии в месяц</span>
           </div>
+        </div>
+
+        {/* Mid-page CTA */}
+        <div className="text-center mt-10">
+          <a href="https://t.me/yuki_smm_bot" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            Попробовать с моим салоном
+          </a>
         </div>
       </div>
     </section>

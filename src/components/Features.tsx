@@ -1,9 +1,12 @@
+import { useReveal } from '../hooks/useReveal'
+
 const features = [
   {
     title: 'Пишет как мастер, а не как студент с биржи',
     desc: 'Знает разницу между ламинированием и кератином. Между ELOS и фотоэпиляцией. Пишет на языке вашей аудитории, а не генерик-шаблонами.',
     size: 'col-span-1 md:col-span-2',
     tags: ['Tone of voice', 'Ваши услуги', 'Имена мастеров'],
+    accent: true,
   },
   {
     title: 'Публикует везде — одной кнопкой',
@@ -12,7 +15,7 @@ const features = [
   },
   {
     title: 'Подписи к фото до/после',
-    desc: 'Загрузили фото работы — агент напишет: что сделали, какие материалы, сколько заняло. Клиенты понимают ценность и записываются.',
+    desc: 'Загрузили фото работы — Yuki напишет: что сделали, какие материалы, сколько заняло. Клиенты понимают ценность и записываются.',
     size: 'col-span-1',
   },
   {
@@ -28,26 +31,31 @@ const features = [
   },
   {
     title: 'Контент-план на неделю — без вашего участия',
-    desc: 'Понедельник — совет по уходу. Среда — акция. Пятница — знакомство с мастером. Агент предлагает темы, вы одобряете или корректируете.',
+    desc: 'Понедельник — совет по уходу. Среда — акция. Пятница — знакомство с мастером. Yuki предлагает темы, вы одобряете или корректируете.',
     size: 'col-span-1 md:col-span-2',
+    accent: true,
   },
 ]
 
 export default function Features() {
+  const ref = useReveal()
+
   return (
-    <section id="features" className="section-padding">
-      <div className="max-w-5xl mx-auto">
+    <section id="features" className="section-standard">
+      <div ref={ref} className="max-w-5xl mx-auto reveal-up">
         <div className="text-center mb-16">
-          <div className="divider mb-6" />
           <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-5">Что умеет Yuki</h2>
           <p className="text-text-secondary max-w-lg mx-auto">
-            Не ChatGPT. Не SMMplanner. Агент, который понимает бьюти.
+            Не ChatGPT. Не SMMplanner. Yuki понимает бьюти.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {features.map((f) => (
-            <div key={f.title} className={`elegant-card p-7 md:p-8 ${f.size}`}>
+            <div
+              key={f.title}
+              className={`elegant-card p-7 md:p-8 ${f.size} ${f.accent ? 'border-t-2 border-t-rose-gold/40 bg-cream-warm/30' : ''}`}
+            >
               {f.tags && (
                 <div className="flex gap-2 mb-4 flex-wrap">
                   {f.tags.map((tag) => (

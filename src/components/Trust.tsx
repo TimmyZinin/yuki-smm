@@ -1,3 +1,5 @@
+import { useReveal } from '../hooks/useReveal'
+
 const items = [
   {
     emoji: '🔒',
@@ -17,9 +19,11 @@ const items = [
 ]
 
 export default function Trust() {
+  const ref = useReveal()
+
   return (
-    <section className="section-padding">
-      <div className="max-w-4xl mx-auto">
+    <section className="section-tight">
+      <div ref={ref} className="max-w-4xl mx-auto reveal-up">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {items.map((item) => (
             <div key={item.title} className="text-center">
