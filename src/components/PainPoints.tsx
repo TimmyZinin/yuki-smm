@@ -31,7 +31,7 @@ export default function PainPoints() {
       {/* Decorative salon image */}
       <div className="absolute top-0 right-0 w-1/3 h-full hidden lg:block">
         <img
-          src="/images/tired-owner.webp"
+          src={`${import.meta.env.BASE_URL}images/tired-owner.webp`}
           alt=""
           className="w-full h-full object-cover"
         />

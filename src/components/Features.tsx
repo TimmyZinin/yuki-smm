@@ -7,7 +7,7 @@ const features = [
     size: 'col-span-1 md:col-span-2',
     tags: ['Tone of voice', 'Ваши услуги', 'Имена мастеров'],
     accent: true,
-    image: '/images/happy-phone.webp',
+    image: 'images/happy-phone.webp',
   },
   {
     title: 'Публикует везде — одной кнопкой',
@@ -35,7 +35,7 @@ const features = [
     desc: 'Понедельник — совет по уходу. Среда — акция. Пятница — знакомство с мастером. Yuki предлагает темы, вы одобряете или корректируете.',
     size: 'col-span-1 md:col-span-2',
     accent: true,
-    image: '/images/beauty-flat-lay.webp',
+    image: 'images/beauty-flat-lay.webp',
   },
 ]
 
@@ -61,7 +61,7 @@ export default function Features() {
               {f.image && (
                 <div className="h-48 overflow-hidden">
                   <img
-                    src={f.image}
+                    src={`${import.meta.env.BASE_URL}${f.image}`}
                     alt=""
                     className="w-full h-full object-cover"
                   />

@@ -27,7 +27,7 @@ export default function SocialProof() {
       {/* Decorative background image */}
       <div className="absolute inset-0">
         <img
-          src="/images/salon-interior.webp"
+          src={`${import.meta.env.BASE_URL}images/salon-interior.webp`}
           alt=""
           className="w-full h-full object-cover opacity-[0.08]"
         />

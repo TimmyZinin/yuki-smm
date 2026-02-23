@@ -8,7 +8,7 @@ export default function TelegramCTA() {
       {/* Background image with dark overlay */}
       <div className="absolute inset-0">
         <img
-          src="/images/freedom-lifestyle.webp"
+          src={`${import.meta.env.BASE_URL}images/freedom-lifestyle.webp`}
           alt=""
           className="w-full h-full object-cover"
         />

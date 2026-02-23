@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-woman.webp"
+          src={`${import.meta.env.BASE_URL}images/hero-woman.webp`}
           alt=""
           className="w-full h-full object-cover"
         />
